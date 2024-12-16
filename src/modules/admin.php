@@ -15,8 +15,10 @@ class admin{
         $this->adress = $adress;
         $this->phone = $phone;
     }
-    public function getfirstname(){
-        return $this->first_name;
+    public function add_admin($connection){
+        $query = $connection->prepare("INSERT INTO admins (First_name,last_name,admin_password,admin_age,admin_address,admin_phone) VALUES (?,?,?,?,?,?)");
+        $query->execute([$this->first_name,$this->last_name,$this->password,$this->age,$this->adress,$this->phone]);
+        
     }
-}
+    }
 ?>

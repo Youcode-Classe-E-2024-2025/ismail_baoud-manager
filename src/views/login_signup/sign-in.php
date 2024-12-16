@@ -78,7 +78,7 @@
 
 <body>
 
-<?php include "../../modules/getDataOfAdmin.php";?>
+<?php include "../../modules/sign_up_data.php";?>
 
     <div class="auth-section">
         <div class="auth-container">
