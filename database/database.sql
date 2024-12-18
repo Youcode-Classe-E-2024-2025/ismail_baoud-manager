@@ -48,3 +48,9 @@ CREATE TABLE feedbacks (
     message_text VARCHAR(1200) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
+
+ALTER TABLE users ALTER status SET DEFAULT 'en attend';
+
+select * from users;
+
+UPDATE users SET status = 'ACCEPT' WHERE user_id=10;

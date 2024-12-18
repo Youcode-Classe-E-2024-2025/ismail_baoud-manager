@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>Sign Up - Scholar Online School</title>
+    <title>Login - Scholar Online School</title>
 
 
-    <link href="../../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  
-    <link rel="stylesheet" href="../../../assets/css/fontawesome.css">
-    <link rel="stylesheet" href="../../../assets/css/templatemo-scholar.css">
-    <link rel="stylesheet" href="../../../assets/css/owl.css">
-    <link rel="stylesheet" href="../../../assets/css/animate.css">
+
+    <link rel="stylesheet" href="../../../public/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../../../public/assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="../../../public/assets/css/owl.css">
+    <link rel="stylesheet" href="../../../public/assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <style>
@@ -56,11 +57,11 @@
         .main-button a {
             background: #0d6efd;
             color: #fff;
-            padding: 12px 30px;
             font-size: 16px;
             text-transform: uppercase;
             text-decoration: none;
             border-radius: 5px;
+            text-align: center;
         }
         .main-button a:hover {
             background: #0d6efd;
@@ -78,46 +79,41 @@
 
 <body>
 
-<?php include "../../modules/sign_up_data.php";?>
 
     <div class="auth-section">
         <div class="auth-container">
             <div class="auth-header">
-                <h2>Sign Up</h2>
-                <p>Create an account to get started with Scholar Online School</p>
+                <h2>Login to RNVous</h2>
+                <p>Welcome back! Please login to your account.</p>
             </div>
 
-            <form method="POST">
+            <form action="../../controllers/login.php" method="POST">
+             
+                <input type="text" class="form-control" placeholder="Username" name="username" required>
+                
 
-                <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
 
-      
-                <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember Me</label>
+                </div>
 
- 
-                <input type="number" class="form-control" placeholder="Age" name="user_age" required>
-
-                <input type="text" class="form-control" placeholder="Address" name="user_address" required>
-
-       
-                <input type="text" class="form-control" placeholder="Phone Number" name="user_phone" required>
-
-
-                <input type="password" class="form-control" placeholder="Password" name="user_password" required>
-
- 
                 <div class="main-button">
-                    <input type="submit" name="sign-up-button" value="Sign Up" class="btn btn-primary">
+                    <input type="submit" class="btn btn-primary" name="login_btn" value="Login">
                 </div>
 
                 <div class="auth-footer">
-                    <p>Already have an account? <a href="login.php">Login</a></p>
+                    <p>Don't have an account? <a href="sign_in.php">Sign Up</a></p>
                 </div>
             </form>
         </div>
     </div>
+    
 
-    <script src="../../../vendor/jquery/jquery.min.js"></script>
-    <script src="../../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../../public/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
