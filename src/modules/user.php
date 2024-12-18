@@ -23,5 +23,21 @@ class user extends admin{
         $result = $query->fetchAll();
         return $result;
     }
+    public static function en_attend($connection){
+        $query = $connection->prepare("SELECT user_id, First_name,last_name,user_password,user_age,user_address,user_phone,status FROM users where status = 'en attend'");
+        $query->execute();
+        $result = $query->fetchAll();
+        return $result;
+    }
+    public static function change_status($connection,$id,$new_status){
+        $query = $connection->prepare("UPDATE users SET status = '$new_status' WHERE user_id=$id;");
+        $query->execute();
+    }
+    public static function get_accept_users($connection){
+        $query = $connection->prepare("SELECT user_id, First_name,last_name,user_password,user_age,user_address,user_phone,status FROM users where status = 'accept'");
+        $query->execute();
+        $result = $query->fetchAll();
+        return $result;
+    }
 }
 ?>

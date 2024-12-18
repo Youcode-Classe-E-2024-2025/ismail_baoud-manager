@@ -85,7 +85,7 @@
                 <p>Create an account to get started with Scholar Online School</p>
             </div>
 
-            <form action="../../controllers/add_data.php" method="POST">
+            <form action="/add_user" method="POST">
 
                 <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
 
@@ -109,7 +109,7 @@
                 </div>
 
                 <div class="auth-footer">
-                    <p>Already have an account? <a href="login.php">Login</a></p>
+                    <p>Already have an account? <a href="/login">Login</a></p>
                 </div>
             </form>
         </div>

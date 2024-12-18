@@ -87,7 +87,7 @@
                 <p>Welcome back! Please login to your account.</p>
             </div>
 
-            <form action="../../controllers/login.php" method="POST">
+            <form action="/analyse" method="POST">
              
                 <input type="text" class="form-control" placeholder="Username" name="username" required>
                 
@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="auth-footer">
-                    <p>Don't have an account? <a href="sign_in.php">Sign Up</a></p>
+                    <p>Don't have an account? <a href="/signIn">Sign Up</a></p>
                 </div>
             </form>
         </div>

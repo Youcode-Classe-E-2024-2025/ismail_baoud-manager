@@ -54,7 +54,7 @@
                       <li class="scroll-to-section"><a href="#courses">Courses</a></li>
                       <li class="scroll-to-section"><a href="#team">Team</a></li>
                       <li class="scroll-to-section"><a href="#events">Events</a></li>
-                      <li class="scroll-to-section"><a href="../login/sign_in.php">log out</a></li>
+                      <li class="scroll-to-section"><a href="../login/login.php">log out</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

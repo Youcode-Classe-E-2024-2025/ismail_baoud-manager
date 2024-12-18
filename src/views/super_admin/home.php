@@ -36,6 +36,7 @@
         }
     </style>
 </head>
+
 <body class="admin-dashboard">
     <div class="sidebar">
         <div class="text-center mb-4">
@@ -58,7 +59,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="../login/login.php">
+                <a class="nav-link text-white" href="/login">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </a>
             </li>
@@ -71,27 +72,35 @@
                 <div class="col-12">
                     <h1 class="mt-4 mb-3">User Management</h1>
                     <div class="row mb-4">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card text-white bg-primary mb-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Total Users</h5>
-                                    <p class="card-text display-4">254</p>
+                                    <p class="card-text display-4"><?= $total_users ;?></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
+                            <div class="card text-white bg-warning mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">En Attend</h5>
+                                    <p class="card-text display-4"><?= $en_attend ;?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
                             <div class="card text-white bg-success mb-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Active Users</h5>
-                                    <p class="card-text display-4">187</p>
+                                    <p class="card-text display-4"><?= $accepted ;?></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card text-white bg-danger mb-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Blocked Users</h5>
-                                    <p class="card-text display-4">12</p>
+                                    <p class="card-text display-4"><?= $refused ;?></p>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +128,7 @@
                                 </thead>
                                 <tbody>
                                     
-                            <?php require "../../modules/display_users.php" ?>
+                            <?php require "src/controllers/display_users.php"; ?>
                                    
                                     
                                 </tbody>

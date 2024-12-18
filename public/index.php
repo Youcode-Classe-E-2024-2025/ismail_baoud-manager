@@ -10,13 +10,13 @@
     <title>gestion des rendez-Vous</title>
 
 
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-scholar.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="public/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="public/assets/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="public/assets/css/owl.css">
+    <link rel="stylesheet" href="public/assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
   </head>
@@ -54,7 +54,7 @@
                       <!-- <li class="scroll-to-section"><a href="#courses">Courses</a></li> -->
                       <li class="scroll-to-section"><a href="#team">Team</a></li>
                       <!-- <li class="scroll-to-section"><a href="#events">Events</a></li> -->
-                      <li class="scroll-to-section"><a href="../src/views/login/sign_in.php">Register Now!</a></li>
+                      <li class="scroll-to-section"><a href="/login">Register Now!</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -654,12 +654,12 @@
   </footer>
 
   
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="public/vendor/jquery/jquery.min.js"></script>
+  <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="public/assets/js/isotope.min.js"></script>
+  <script src="public/assets/js/owl-carousel.js"></script>
+  <script src="public/assets/js/counter.js"></script>
+  <script src="public/assets/js/custom.js"></script>
 
   </body>
 </html>

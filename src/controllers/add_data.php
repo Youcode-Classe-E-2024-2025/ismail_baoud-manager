@@ -39,7 +39,7 @@ include_once '../modules/user.php';
     }
 
    }
-   header('location: ../views/login/sign_in.php');
+   header('location:/login');
 
 
 
