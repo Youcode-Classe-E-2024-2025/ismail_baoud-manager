@@ -1,7 +1,9 @@
 <?php
-include_once '../config/connection.php';
-include_once '../modules/admin.php';
-include_once '../modules/user.php';
+// include_once 'config/connection.php';
+// include_once 'src/modules/admin.php';
+// include_once 'src/modules/user.php';
+// include_once 'src/modules/medecin.php';
+
 
 
   if(isset($_POST["sign-up-button"])){
@@ -38,9 +40,27 @@ include_once '../modules/user.php';
 
     }
 
-   }
-   header('location:/login');
+  }
+
+  header('location:/login');
+
+  if(isset($_POST["add_med"])){
+    $first_name = $_POST["first_name"];
+
+    $last_name = $_POST["last_name"];
+
+    $password = $_POST["user_password"];
+
+    $age = $_POST["user_age"];
+
+    $adress = $_POST["user_address"];
+
+    $phone = $_POST["user_phone"];
+
+    $query = new medecin($first_name,$last_name,$password,$age,$adress,$phone);
+    $query->add_user_med($conn);
+    header('location:/admin_management');
 
 
-
+  }
 ?>

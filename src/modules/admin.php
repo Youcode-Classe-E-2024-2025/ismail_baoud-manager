@@ -1,5 +1,5 @@
 <?php 
-class admin{
+class admin {
     protected $first_name;
     protected $last_name;
     protected $password;

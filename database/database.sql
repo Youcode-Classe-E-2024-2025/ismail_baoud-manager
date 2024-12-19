@@ -54,3 +54,6 @@ ALTER TABLE users ALTER status SET DEFAULT 'en attend';
 select * from users;
 
 UPDATE users SET status = 'ACCEPT' WHERE user_id=10;
+
+ALTER TABLE medecin
+ADD status varchar(25);

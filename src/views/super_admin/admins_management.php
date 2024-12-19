@@ -36,7 +36,7 @@
         }
     </style>
 </head>
-
+<?php require "src/controllers/medecin_statistic.php";?>
 <body class="admin-dashboard">
     <div class="sidebar">
         <div class="text-center mb-4">
@@ -44,12 +44,12 @@
         </div>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active text-white" href="#">
+                <a class="nav-link active text-white" href="/user_management">
                     <i class="fas fa-users"></i> User Management
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="/admin_management">
+                <a class="nav-link text-white" href="#">
                     <i class="fas fa-chart-bar"></i> Partners Management 
                 </a>
             </li>
@@ -65,43 +65,41 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="mt-4 mb-3">User Management</h1>
+                    <h1 class="mt-4 mb-3">Admin Management</h1>
                     <div class="row mb-4">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card text-white bg-primary mb-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Total Users</h5>
-                                    <p class="card-text display-4"><?= $total_users ;?></p>
+                                    <p class="card-text display-4"><?=$total_medecins?></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="card text-white bg-warning mb-3">
-                                <div class="card-body">
-                                    <h5 class="card-title">En Attend</h5>
-                                    <p class="card-text display-4"><?= $en_attend ;?></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card text-white bg-success mb-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Active Users</h5>
-                                    <p class="card-text display-4"><?= $accepted ;?></p>
+                                    <p class="card-text display-4"><?=$accepted ?></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card text-white bg-danger mb-3">
                                 <div class="card-body">
                                     <h5 class="card-title">Blocked Users</h5>
-                                    <p class="card-text display-4"><?= $refused ;?></p>
+                                    <p class="card-text display-4"><?=$refused ?></p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="card user-table">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h4>User List</h4>
+                                <a href="/sign_up_admin" class="btn btn-primary" data-toggle="modal" name="add_admin" data-target="#addUserModal">
+                                    <i class="fas fa-plus"></i> Add New doctor
+                                </a>
+                        </div>
                         <div class="card-body">
                             <table class="table table-striped">
                                 <thead>
@@ -117,8 +115,7 @@
                                 </thead>
                                 <tbody>
                                     
-                            <?php require "src/controllers/display_users.php"; ?>
-                                   
+                                   <?php require "src/controllers/dispaly_admins.php";?>
                                     
                                 </tbody>
                             </table>
