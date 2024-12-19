@@ -32,5 +32,6 @@ class admin {
         $result = $query->fetchAll();
         return $result;
     }
+
 }
 ?>

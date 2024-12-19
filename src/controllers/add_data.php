@@ -5,9 +5,11 @@
 // include_once 'src/modules/medecin.php';
 
 
-
+  $rexName = "/^[a-zA-Z' -]+$/";
+  $rexEmail = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
+  $isvalide = true;
   if(isset($_POST["sign-up-button"])){
-
+    
     $first_name = $_POST["first_name"];
 
     $last_name = $_POST["last_name"];
@@ -20,9 +22,7 @@
 
     $phone = $_POST["user_phone"];
 
-    $query = "SELECT * FROM admins";
-
-    $result = $conn->query($query);
+    $result = admin::get_admin($conn);
 
     $row = $result->fetch(PDO::FETCH_ASSOC);
 
@@ -63,4 +63,6 @@
 
 
   }
+
+  
 ?>

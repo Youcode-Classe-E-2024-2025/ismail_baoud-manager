@@ -31,6 +31,12 @@ class medecin extends admin{
         $result = $query->fetchAll();
         return $result;
     }
+    public static function compare_med($connection,$name){
+        $query = $connection->prepare("SELECT med_id FROM medecin where last_name = '$name'");
+        $query->execute();
+        $result = $query->fetchAll();
+        return $result;
+    }
     
 }
 ?>

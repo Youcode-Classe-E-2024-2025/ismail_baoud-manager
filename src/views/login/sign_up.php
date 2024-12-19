@@ -17,9 +17,14 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <style>
+        .con{
+    background-image: url('../../../public/assets/images/touth-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        }
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f9f9f9;
         }
         .auth-section {
             display: flex;
@@ -29,7 +34,6 @@
             padding: 60px 0;
         }
         .auth-container {
-            background: #fff;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             padding: 40px;
@@ -78,16 +82,17 @@
 
 <body>
 
-    <div class="auth-section">
+<div class="con">
+<div class="auth-section">
         <div class="auth-container">
             <div class="auth-header">
                 <h2>Sign Up</h2>
                 <p>Create an account to get started with Scholar Online School</p>
             </div>
-
+            <?php include_once "src/controllers/add_data.php"; ?>
             <form action="/add_user" method="POST">
 
-                <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                <input type="text" class="form-control" placeholder="First Name" name="first_name">
 
       
                 <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
@@ -114,6 +119,7 @@
             </form>
         </div>
     </div>
+</div>
 
     <script src="../../../public/vendor/jquery/jquery.min.js"></script>
     <script src="../../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -4,6 +4,7 @@ require_once 'config/connection.php';
 include_once 'src/modules/admin.php';
 include_once 'src/modules/user.php';
 include_once 'src/modules/medecin.php';
+include_once 'src/modules/rendez-vous.php';
 include_once 'src/controllers/users_statistic.php';
 
 $uri = parse_url($_SERVER["REQUEST_URI"])["path"];
@@ -24,6 +25,7 @@ $routes = [
     "/admin_management"=>"src/views/super_admin/admins_management.php",
     "/user_contacts"=>"src/views/sous_admin/les_contact_des_client.php",
     "/medecin_page"=>"src/views/sous_admin/home.php",
+    "/appointment"=>"src/controllers/handlin_Appointment.php",
     "/404"=>"error/404.php"
 ];
 if(array_key_exists($uri,$routes)){

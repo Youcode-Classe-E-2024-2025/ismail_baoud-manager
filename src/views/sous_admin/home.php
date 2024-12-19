@@ -36,8 +36,10 @@
         }
     </style>
 </head>
+
+
 <body class="admin-dashboard">
-    <div class="sidebar">
+    <!-- <div class="sidebar">
         <div class="text-center mb-4">
             <h3>Admin Panel</h3>
         </div>
@@ -58,7 +60,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     
     <div class="content-area">
         <div class="container-fluid">

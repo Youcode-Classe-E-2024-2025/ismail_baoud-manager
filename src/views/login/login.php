@@ -18,9 +18,15 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <style>
+
+        .con{
+    background-image: url('../../../public/assets/images/touth-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        }
         body {
             font-family: 'Poppins', sans-serif;
-            background: #f9f9f9;
         }
         .auth-section {
             display: flex;
@@ -30,7 +36,6 @@
             padding: 60px 0;
         }
         .auth-container {
-            background: #fff;
             border-radius: 8px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             padding: 40px;
@@ -72,15 +77,16 @@
         }
         .auth-footer a {
             text-decoration: none;
-            color: #4CAF50;
+            color:rgb(26, 156, 30);
         }
     </style>
 </head>
 
 <body>
 
-
-    <div class="auth-section">
+<div class="con">
+    
+<div class="auth-section">
         <div class="auth-container">
             <div class="auth-header">
                 <h2>Login to RNVous</h2>
@@ -104,11 +110,12 @@
                 </div>
 
                 <div class="auth-footer">
-                    <p>Don't have an account? <a href="/signUp">Sign Up</a></p>
+                    <p class="text-dark">Don't have an account? <a href="/signUp">Sign Up</a></p>
                 </div>
             </form>
         </div>
     </div>
+</div>
     
     <script src="../../../public/vendor/jquery/jquery.min.js"></script>
     <script src="../../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

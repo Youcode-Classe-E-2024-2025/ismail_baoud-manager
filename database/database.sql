@@ -57,3 +57,6 @@ UPDATE users SET status = 'ACCEPT' WHERE user_id=10;
 
 ALTER TABLE medecin
 ADD status varchar(25);
+
+ALTER TABLE appointment
+DROP COLUMN phone;
