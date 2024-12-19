@@ -9,6 +9,7 @@ if(isset($_POST["submit_accept_med"])){
     $new_status = $_POST["new_status"];
 }
 if(isset($_POST["submit_refuse_med"])){
+    
     $med_id = $_POST["id_target"];
     $new_status = $_POST["new_status"];
 }
